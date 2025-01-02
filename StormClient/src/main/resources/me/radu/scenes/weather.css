@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+.root {
+    -fx-background-color:
+            linear-gradient(
+                    to bottom,
+                    #3175cd 0%,
+                    #9460da 50%
+            ),
+            linear-gradient(
+                    to left,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0) 100%
+            );
+    -fx-min-height: 800px;
+    -fx-min-widht: 1200px;
+    -fx-pref-height: 800px;
+    -fx-pref-widht: 1200px;
+    -fx-font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Header Section */
+.header-bar {
+    -fx-padding: 10 10 10 20;
+    -fx-background-color: #1a2035;
+}
+
+.nav-card {
+    -fx-background-color: #333951;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-spacing: 5;
+    -fx-alignment: center;
+    -fx-margin: 0 20px 0 0;
+}
+
+.nav-card:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+}
+
+.nav-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.nav-temp {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+/* Center Section */
+.weather-container {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+.weather-location {
+    -fx-fill: white;
+    -fx-font-size: 24px;
+    -fx-margin: 0 0 10px 0;
+}
+
+.weather-card {
+    -fx-background-color: #24243e;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-spacing: 10;
+}
+
+.weather-header {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.weather-time {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.weather-temp {
+    -fx-text-fill: white;
+    -fx-font-size: 48px;
+}
+
+.weather-condition {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+/* 5 Day Forecast Section */
+.forecast-header {
+    -fx-fill: white;
+    -fx-font-size: 24px;
+    -fx-margin: 10px 0;
+}
+
+.forecast-container {
+    -fx-spacing: 15;
+    -fx-alignment: top-left;
+}
+
+.forecast-card {
+    -fx-background-color: #333951;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-spacing: 5;
+    -fx-alignment: center;
+}
+
+.forecast-day {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.forecast-temp {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}

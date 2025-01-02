@@ -10,7 +10,10 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
-public class User {
+@NamedQueries({
+        @NamedQuery(name = "User.findByUsername", query = "select u from User u where u.username = :username"),
+})
+public class User implements Comparable<User> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -44,6 +47,11 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id, username, password, firstName, lastName, type);
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return (int) (this.id - o.id);
     }
 
     public enum UserType {

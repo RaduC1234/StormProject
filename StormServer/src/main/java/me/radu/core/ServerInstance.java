@@ -1,6 +1,7 @@
 package me.radu.core;
 
 import me.radu.command.CommandHandler;
+import me.radu.command.UserCommand;
 import me.radu.data.DatabaseManager;
 import me.radu.network.ServerNetworkService;
 import org.apache.logging.log4j.Logger;
@@ -48,6 +49,11 @@ public class ServerInstance {
             LOGGER.fatal("Unexpected error during DatabaseManager initialization.", e);
             stop();
         }
+
+        this.commandHandler = new CommandHandler();
+        this.commandHandler
+                .addCommand(new UserCommand(this.databaseManager.getUserService()))
+                .listen();
 
         try {
             LOGGER.info("Starting Network Service...");

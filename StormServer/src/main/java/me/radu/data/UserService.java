@@ -1,6 +1,7 @@
 package me.radu.data;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
@@ -40,6 +41,38 @@ public class UserService {
             entityManager.remove(user);
         }
         entityManager.getTransaction().commit();
+    }
+
+
+    public User findByUsername(String username) throws Exception {
+
+        return entityManager.createNamedQuery("User.findByUsername", User.class)
+                .setParameter("username", username)
+                .getSingleResult();
+    }
+
+    public boolean existsByUsername(String username) throws Exception {
+        User byUsername;
+        try {
+            byUsername = findByUsername(username);
+        } catch (NoResultException e) {
+            return false;
+        }
+
+        return byUsername != null;
+    }
+
+    public boolean deleteByUsername(String username) throws Exception {
+        User byUsername = findByUsername(username);
+
+        if (byUsername == null)
+            return false;
+
+        entityManager.getTransaction().begin();
+        entityManager.remove(byUsername);
+        entityManager.getTransaction().commit();
+        return true;
+
     }
 }
 

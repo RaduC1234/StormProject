@@ -14,11 +14,10 @@ import java.util.concurrent.Executors;
 
 public class CommandHandler {
 
-    private static final Logger logger = LogManager.getLogger(CommandHandler.class);
+    private static final Logger LOGGER = LogManager.getLogger(CommandHandler.class);
 
     private final ExecutorService service = Executors.newSingleThreadExecutor();
 
-    @Getter
     private List<ICommand> commands;
 
     public CommandHandler() {
@@ -55,7 +54,7 @@ public class CommandHandler {
                         try {
                             command.execute();
                         } catch (Exception e) {
-                            logger.error(e.getMessage());
+                           LOGGER.warn("Error parsing command. Not enough arguments.");
                         }
                     }
                 }
@@ -64,12 +63,12 @@ public class CommandHandler {
                     for (ICommand command : commands) {
                         row.append(command.name).append(" -> ").append(command.usage).append("\n");
                     }
-                    //logger.info(ResourceServerMessages.getObjectAsString("command.help.listAll").replace("{0}", row));
+                    LOGGER.info("List of all commands: \n{0}".replace("{0}", row));
                     continue;
                 }
 
                 if (!commandFound) {
-                    //logger.warn(ResourceServerMessages.getObjectAsString("command.help.unknown"));
+                    LOGGER.warn("Unknown command.");
                 }
 
             }
