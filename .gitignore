@@ -1,0 +1,57 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Generated files
+*.iml
+*.log
+*.idea/
+target/
+out/
+
+# IntelliJ IDEA
+.idea/**
+*.iws
+*.iml
+*.ipr
+
+# Maven
+.mvn/
+!**/src/main/**
+!**/src/test/**
+**/target/**
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.vscode/
+*.swp
+*.swo
+*.orig
+
+# User-specific files
+*.env
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+*.pfx
+
+# Debugging files
+hs_err_pid*
+replay_pid*
+
+# Logs
+logs/
+*.log
+
+# Others
+*.class
+*.jar
+*.war
+*.ear
