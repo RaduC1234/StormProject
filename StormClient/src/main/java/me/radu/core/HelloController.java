@@ -1,4 +1,4 @@
-package me.radu;
+package me.radu.core;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

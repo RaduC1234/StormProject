@@ -1,4 +1,4 @@
-package me.radu;
+package me.radu.core;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
