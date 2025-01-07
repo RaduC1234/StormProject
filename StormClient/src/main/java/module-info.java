@@ -5,8 +5,13 @@ module me.radu.stormclient {
     requires org.apache.logging.log4j;
     requires static lombok;
 
-
-    opens me.radu to javafx.fxml;
-    exports me.radu.core;
+    opens me.radu.gui to javafx.fxml;
     opens me.radu.core to javafx.fxml;
+
+    opens me.radu.network to com.google.gson;
+    opens me.radu.data to com.google.gson;
+
+    exports me.radu.gui;
+    exports me.radu.network;
+    exports me.radu.core;
 }

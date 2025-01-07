@@ -17,7 +17,7 @@
                      <children>
                         <ImageView fitHeight="107.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../assets/tray_logo.png" />
+                              <Image url="@../images/duke.png" />
                            </image></ImageView>
                      </children>
                   </HBox>
@@ -39,7 +39,10 @@
                         <Font name="Times New Roman" size="19.0" />
                      </font>
                   </Label>
-                  <Button fx:id="login_signin_button" mnemonicParsing="false" prefHeight="38.0" prefWidth="507.0" stylesheets="@login.css" text="Log In" textFill="WHITE">
+                  <Button fx:id="login_signin_button" mnemonicParsing="false"
+                          prefHeight="38.0" prefWidth="507.0"
+                          stylesheets="@login.css" text="Log In" textFill="WHITE"
+                          onAction="#handleLoginButtonPress">
                      <font>
                         <Font size="20.0" />
                      </font>

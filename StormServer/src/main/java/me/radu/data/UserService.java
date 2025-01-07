@@ -44,11 +44,15 @@ public class UserService {
     }
 
 
-    public User findByUsername(String username) throws Exception {
+    public User findByUsername(String username) {
+        try {
+            return entityManager.createNamedQuery("User.findByUsername", User.class)
+                    .setParameter("username", username)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
 
-        return entityManager.createNamedQuery("User.findByUsername", User.class)
-                .setParameter("username", username)
-                .getSingleResult();
     }
 
     public boolean existsByUsername(String username) throws Exception {

@@ -1,9 +1,12 @@
 package me.radu.core;
 
+import lombok.Getter;
 import me.radu.command.CommandHandler;
 import me.radu.command.UserCommand;
 import me.radu.data.DatabaseManager;
 import me.radu.network.ServerNetworkService;
+import me.radu.network.request.AuthenticateRequest;
+import me.radu.network.request.GetSelfUserRequest;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -16,8 +19,10 @@ public class ServerInstance {
 
     private static final Logger LOGGER = LogManager.getLogger(ServerInstance.class);
 
+    @Getter
     private ServerNetworkService serverNetworkService;
     private CommandHandler commandHandler;
+    @Getter
     private DatabaseManager databaseManager;
 
     public ServerInstance() {
@@ -55,8 +60,10 @@ public class ServerInstance {
                 .addCommand(new UserCommand(this.databaseManager.getUserService()))
                 .listen();
 
+        this.serverNetworkService.addRequestTemplate("AUTHENTICATE", new AuthenticateRequest(this));
+        this.serverNetworkService.addRequestTemplate("GET_SELF_USER", new GetSelfUserRequest());
+
         try {
-            LOGGER.info("Starting Network Service...");
             this.serverNetworkService.start(8080);
         } catch (IOException e) {
             LOGGER.error(e.getMessage());
