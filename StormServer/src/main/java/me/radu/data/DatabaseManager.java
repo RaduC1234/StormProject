@@ -2,8 +2,7 @@ package me.radu.data;
 
 import jakarta.persistence.EntityManager;
 import lombok.Getter;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.log4j.Log4j2;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -12,9 +11,8 @@ import org.hibernate.service.ServiceRegistry;
 
 import java.util.Properties;
 
+@Log4j2
 public class DatabaseManager {
-
-    private static final Logger LOGGER = LogManager.getLogger(DatabaseManager.class);
 
     private final EntityManager entityManager;
 
@@ -98,16 +96,16 @@ public class DatabaseManager {
                 configuration.addAnnotatedClass(Location.class);
                 configuration.addAnnotatedClass(Weather.class);
 
-                LOGGER.info("Hibernate Configuration loaded");
+                log.info("Hibernate Configuration loaded");
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-                LOGGER.info("Hibernate serviceRegistry created");
+                log.info("Hibernate serviceRegistry created");
 
                 SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 
                 this.entityManager = sessionFactory.openSession().getEntityManagerFactory().createEntityManager();
             } catch (Exception ex) {
-                LOGGER.fatal(ex.getMessage());
+                log.fatal(ex.getMessage());
             }
             return new DatabaseManager(this);
         }

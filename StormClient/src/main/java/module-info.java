@@ -14,4 +14,6 @@ module me.radu.stormclient {
     exports me.radu.gui;
     exports me.radu.network;
     exports me.radu.core;
+    exports me.radu.gui.controller;
+    opens me.radu.gui.controller to javafx.fxml;
 }

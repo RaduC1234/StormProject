@@ -119,3 +119,42 @@
     -fx-text-fill: white;
     -fx-font-size: 16px;
 }
+
+.input-field {
+    -fx-pref-width: 300px;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-border-color: #5a5f7d;
+    -fx-border-width: 1;
+    -fx-text-fill: white;
+    -fx-background-color: #3a3e5b;
+}
+
+.input-field:focused {
+    -fx-border-color: #7a82b8;
+    -fx-background-color: #444a70;
+}
+
+.action-button {
+    -fx-background-color: #4c9aff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-pref-height: 40;
+    -fx-pref-width: 80;
+}
+
+.action-button:hover {
+    -fx-background-color: #3578e5;
+}
+
+.action-button:pressed {
+    -fx-background-color: #2a5db0;
+}
+
+.message-label {
+    -fx-font-size: 16px;
+    -fx-margin: 0 0 0px 0;
+}

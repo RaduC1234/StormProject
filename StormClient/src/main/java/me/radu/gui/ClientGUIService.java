@@ -2,23 +2,23 @@ package me.radu.gui;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import lombok.Getter;
-import lombok.Synchronized;
 import me.radu.ClientMain;
 import me.radu.core.ClientInstance;
+import me.radu.gui.controller.LoginViewController;
+import me.radu.gui.controller.MapViewController;
+import me.radu.gui.controller.WeatherViewController;
 
 import java.io.IOException;
 import java.util.Objects;
 
 import static java.lang.System.exit;
+import static java.lang.System.in;
 
 public class ClientGUIService extends Application {
 
@@ -33,11 +33,14 @@ public class ClientGUIService extends Application {
     private static LoginViewController loginViewController;
     @Getter
     private static WeatherViewController weatherViewController;
+    @Getter
+    private static MapViewController mapViewController;
 
     public static void launchGUI(ClientInstance instance) {
         clientInstance = instance;
         loginViewController = new LoginViewController(instance);
-        weatherViewController = new WeatherViewController();
+        weatherViewController = new WeatherViewController(instance);
+        mapViewController = new MapViewController(instance);
         launch();
     }
 
@@ -70,10 +73,12 @@ public class ClientGUIService extends Application {
 
         FXMLLoader loginScreen = new FXMLLoader(ClientMain.class.getResource("/scenes/login-view.fxml")); loginScreen.setController(loginViewController);
         FXMLLoader weatherScreen = new FXMLLoader(ClientMain.class.getResource("/scenes/weather-view.fxml")); weatherScreen.setController(weatherViewController);
+        FXMLLoader mapScreen = new FXMLLoader(ClientMain.class.getResource("/scenes/map-view.fxml")); mapScreen.setController(mapViewController);
 
         registry = new SceneRegistry(stage);
-        registry.addScreen("loginScreen", new Scene(loginScreen.load(), BASE_SCREEN_WIDTH, BASE_SCREEN_HEIGHT));
-        registry.addScreen("weatherScreen", new Scene(weatherScreen.load(), BASE_SCREEN_WIDTH, BASE_SCREEN_HEIGHT));
+        registry.addScreen("loginScreen", new Scene(loginScreen.load(), BASE_SCREEN_WIDTH, BASE_SCREEN_HEIGHT), loginViewController);
+        registry.addScreen("weatherScreen", new Scene(weatherScreen.load(), BASE_SCREEN_WIDTH, BASE_SCREEN_HEIGHT), weatherViewController);
+        registry.addScreen("mapScreen", new Scene(mapScreen.load(), BASE_SCREEN_WIDTH, BASE_SCREEN_HEIGHT),  mapViewController);
     }
 
     public void setScene(String sceneName) {

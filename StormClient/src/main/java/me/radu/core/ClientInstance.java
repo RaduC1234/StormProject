@@ -2,18 +2,26 @@ package me.radu.core;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.log4j.Log4j2;
+import me.radu.data.Location;
 import me.radu.data.User;
 import me.radu.gui.ClientGUIService;
 import me.radu.network.ClientNetworkService;
 
+import java.util.Optional;
+
+@Log4j2
 public class ClientInstance {
 
     @Getter
     private ClientNetworkService networkService;
     private Thread guiThread;
+
     @Getter
     @Setter
     private User selfClient;
+    @Getter
+    private Location savedLocation;
 
     public void start() {
         // Start GUI on a new thread
@@ -38,6 +46,6 @@ public class ClientInstance {
         if (networkService != null) {
             networkService.stop();
         }
-        System.out.println("Client stopped.");
+        log.info("Client stopped.");
     }
 }

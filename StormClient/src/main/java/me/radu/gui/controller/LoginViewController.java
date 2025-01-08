@@ -1,7 +1,6 @@
-package me.radu.gui;
+package me.radu.gui.controller;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -11,9 +10,8 @@ import javafx.scene.control.TextField;
 import lombok.extern.log4j.Log4j2;
 import me.radu.core.ClientInstance;
 import me.radu.data.User;
+import me.radu.gui.ClientGUIService;
 import me.radu.network.Packet;
-
-import java.util.concurrent.CompletableFuture;
 
 @Log4j2
 public class LoginViewController {
@@ -30,7 +28,7 @@ public class LoginViewController {
     @FXML
     public Label login_info_label;
 
-    private final ClientInstance instance; // Initialize properly if needed
+    private final ClientInstance instance;
 
     public LoginViewController(ClientInstance instance) {
         this.instance = instance;
