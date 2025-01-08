@@ -1,6 +1,8 @@
 package me.radu.data;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.transaction.Transactional;
 
 import java.util.List;
 
@@ -20,6 +22,7 @@ public class LocationService {
         return entityManager.find(Location.class, id);
     }
 
+    @Transactional
     public void save(Location location) {
         entityManager.getTransaction().begin();
         if (location.getId() == null) {
@@ -30,6 +33,7 @@ public class LocationService {
         entityManager.getTransaction().commit();
     }
 
+    @Transactional
     public void deleteById(Long id) {
         entityManager.getTransaction().begin();
         Location location = entityManager.find(Location.class, id);
@@ -37,6 +41,16 @@ public class LocationService {
             entityManager.remove(location);
         }
         entityManager.getTransaction().commit();
+    }
+
+    public Location findByName(String name) {
+        try {
+            return entityManager.createNamedQuery("Location.findByName", Location.class)
+                    .setParameter("name", name)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 }
 

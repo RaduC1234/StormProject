@@ -59,7 +59,7 @@ public class ClientNetworkService {
 
     private void handleIncomingBytes() {
         try {
-            ByteBuffer buffer = ByteBuffer.allocate(1024);
+            ByteBuffer buffer = ByteBuffer.allocate(65536);
             int bytesRead = socketChannel.read(buffer);
             if (bytesRead == -1) {
                 log.info("Server closed connection");

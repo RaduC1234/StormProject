@@ -21,6 +21,7 @@ public class ClientInstance {
     @Setter
     private User selfClient;
     @Getter
+    @Setter
     private Location savedLocation;
 
     public void start() {

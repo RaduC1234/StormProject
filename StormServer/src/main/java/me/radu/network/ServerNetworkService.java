@@ -104,7 +104,7 @@ public class ServerNetworkService {
 
         Client client = clientOpt.get();
         try {
-            ByteBuffer buffer = ByteBuffer.allocate(1024);
+            ByteBuffer buffer = ByteBuffer.allocate(65536);
             SocketChannel clientChannel = client.getChannel();
 
             int bytesRead = clientChannel.read(buffer);

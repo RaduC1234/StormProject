@@ -9,6 +9,9 @@ import lombok.ToString;
 import java.util.Objects;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Location.findByName", query = "select l from Location l where l.name like :name")
+})
 @Getter
 @Setter
 @ToString
@@ -22,9 +25,9 @@ public class Location {
     @Column(nullable = false, unique = true)
     private String name;
 
-    private Long latitude;
+    private Double latitude;
 
-    private Long longitude;
+    private Double longitude;
 
     @Override
     public boolean equals(Object o) {

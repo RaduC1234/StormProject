@@ -93,6 +93,9 @@ public class Packet {
         USER_IN_USE,
         BAD_CREDENTIALS,
         NOT_AUTHENTICATED,
+        BAD_REQUEST,
+        INTERNAL_ERROR,
+        NOT_FOUND,
         UNKNOWN
     }
 }

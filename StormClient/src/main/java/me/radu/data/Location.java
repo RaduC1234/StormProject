@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public record Location(
         Long id,
         String name,
-        Long latitude,
-        Long longitude,
+        Double latitude,
+        Double longitude,
         ArrayList<Weather> weather
 ) {}

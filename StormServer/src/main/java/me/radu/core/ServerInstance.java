@@ -5,8 +5,7 @@ import me.radu.command.CommandHandler;
 import me.radu.command.UserCommand;
 import me.radu.data.DatabaseManager;
 import me.radu.network.ServerNetworkService;
-import me.radu.network.request.AuthenticateRequest;
-import me.radu.network.request.GetSelfUserRequest;
+import me.radu.network.request.*;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -60,8 +59,13 @@ public class ServerInstance {
                 .addCommand(new UserCommand(this.databaseManager.getUserService()))
                 .listen();
 
-        this.serverNetworkService.addRequestTemplate("AUTHENTICATE", new AuthenticateRequest(this));
-        this.serverNetworkService.addRequestTemplate("GET_SELF_USER", new GetSelfUserRequest());
+        this.serverNetworkService
+                .addRequestTemplate("AUTHENTICATE", new AuthenticateRequest(this))
+                .addRequestTemplate("GET_SELF_USER", new GetSelfUserRequest())
+                .addRequestTemplate("IS_LOCATION", new IsLocationRequest(this.databaseManager.getLocationService()))
+                .addRequestTemplate("ADMIN_ADD_INFO", new AdminAddInfoRequest(this))
+                .addRequestTemplate("GET_FORECAST", new GetForecastRequest(this));
+
 
         try {
             this.serverNetworkService.start(8080);

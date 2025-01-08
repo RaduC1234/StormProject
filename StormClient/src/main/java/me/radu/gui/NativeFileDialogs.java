@@ -9,7 +9,7 @@ public class NativeFileDialogs {
 
     static {
         try {
-            InputStream inputStream = NativeFileDialogs.class.getResourceAsStream("native_file_dialogs.dll");
+            InputStream inputStream = NativeFileDialogs.class.getResourceAsStream("/native_file_dialogs.dll");
             File tempFile = File.createTempFile("native_file_dialogs", ".dll");
             OutputStream outputStream = new FileOutputStream(tempFile);
             byte[] buffer = new byte[1024];

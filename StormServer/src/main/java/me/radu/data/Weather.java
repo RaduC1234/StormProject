@@ -14,6 +14,11 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
+@NamedQueries({
+        @NamedQuery(
+                name = "Weather.findByDateAndLocation", query = "SELECT w FROM Weather w WHERE w.date = :date AND w.location = :location"
+        )
+})
 public class Weather {
 
     @Id
@@ -34,7 +39,7 @@ public class Weather {
 
     private Condition condition;
 
-    enum Condition {
+    public enum Condition {
         SUNNY,
         CLOUDY,
         RAINY,
