@@ -1,0 +1,1156 @@
+{
+    "locations": [
+        {
+            "name": "City_1",
+            "latitude": -50.3579,
+            "longitude": -30.2789
+        },
+        {
+            "name": "City_2",
+            "latitude": -89.7083,
+            "longitude": -126.2548
+        },
+        {
+            "name": "City_3",
+            "latitude": 58.8151,
+            "longitude": 155.0515
+        },
+        {
+            "name": "City_4",
+            "latitude": 83.9644,
+            "longitude": 83.314
+        },
+        {
+            "name": "City_5",
+            "latitude": -67.2821,
+            "longitude": -61.4756
+        },
+        {
+            "name": "City_6",
+            "latitude": 53.8461,
+            "longitude": 82.5437
+        },
+        {
+            "name": "City_7",
+            "latitude": 14.0283,
+            "longitude": 138.305
+        },
+        {
+            "name": "City_8",
+            "latitude": -14.4417,
+            "longitude": -177.2883
+        },
+        {
+            "name": "City_9",
+            "latitude": -52.6406,
+            "longitude": -144.2781
+        },
+        {
+            "name": "City_10",
+            "latitude": 53.7255,
+            "longitude": 158.7767
+        }
+    ],
+    "weather_records": [
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-08",
+            "maxTemperature": -7,
+            "minTemperature": -17,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 31,
+            "minTemperature": -4,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-10",
+            "maxTemperature": -9,
+            "minTemperature": -17,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 11,
+            "minTemperature": -15,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 10,
+            "minTemperature": -6,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 40,
+            "minTemperature": -1,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 36,
+            "minTemperature": -1,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-15",
+            "maxTemperature": -6,
+            "minTemperature": -12,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 27,
+            "minTemperature": -3,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_1",
+                "latitude": -50.3579,
+                "longitude": -30.2789
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 14,
+            "minTemperature": -18,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 17,
+            "minTemperature": -18,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 9,
+            "minTemperature": -11,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-10",
+            "maxTemperature": 39,
+            "minTemperature": 27,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 30,
+            "minTemperature": -8,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 35,
+            "minTemperature": 14,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 39,
+            "minTemperature": -4,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 20,
+            "minTemperature": 3,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 10,
+            "minTemperature": -6,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 40,
+            "minTemperature": 0,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_2",
+                "latitude": -89.7083,
+                "longitude": -126.2548
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 31,
+            "minTemperature": 22,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 32,
+            "minTemperature": 1,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 17,
+            "minTemperature": -12,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-10",
+            "maxTemperature": 8,
+            "minTemperature": -20,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 29,
+            "minTemperature": -13,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-12",
+            "maxTemperature": -9,
+            "minTemperature": -14,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-13",
+            "maxTemperature": -3,
+            "minTemperature": -10,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-14",
+            "maxTemperature": -4,
+            "minTemperature": -15,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 8,
+            "minTemperature": 6,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 22,
+            "minTemperature": -18,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_3",
+                "latitude": 58.8151,
+                "longitude": 155.0515
+            },
+            "date": "2025-01-17",
+            "maxTemperature": -3,
+            "minTemperature": -16,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 16,
+            "minTemperature": -10,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 30,
+            "minTemperature": -7,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-10",
+            "maxTemperature": 12,
+            "minTemperature": -14,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 6,
+            "minTemperature": -13,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 32,
+            "minTemperature": 13,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 17,
+            "minTemperature": 13,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 5,
+            "minTemperature": -7,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 36,
+            "minTemperature": 1,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 38,
+            "minTemperature": -14,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_4",
+                "latitude": 83.9644,
+                "longitude": 83.314
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 38,
+            "minTemperature": 34,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 4,
+            "minTemperature": -5,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 36,
+            "minTemperature": 33,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-10",
+            "maxTemperature": 27,
+            "minTemperature": 0,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-11",
+            "maxTemperature": -8,
+            "minTemperature": -11,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 10,
+            "minTemperature": 4,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 5,
+            "minTemperature": -4,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-14",
+            "maxTemperature": -3,
+            "minTemperature": -16,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 16,
+            "minTemperature": 12,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 13,
+            "minTemperature": -13,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_5",
+                "latitude": -67.2821,
+                "longitude": -61.4756
+            },
+            "date": "2025-01-17",
+            "maxTemperature": -5,
+            "minTemperature": -6,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 21,
+            "minTemperature": 13,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 28,
+            "minTemperature": -18,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-10",
+            "maxTemperature": -9,
+            "minTemperature": -12,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-11",
+            "maxTemperature": -2,
+            "minTemperature": -17,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 5,
+            "minTemperature": -7,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-13",
+            "maxTemperature": -10,
+            "minTemperature": -15,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 16,
+            "minTemperature": -9,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 40,
+            "minTemperature": -17,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 28,
+            "minTemperature": -7,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_6",
+                "latitude": 53.8461,
+                "longitude": 82.5437
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 24,
+            "minTemperature": 5,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 36,
+            "minTemperature": -18,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-09",
+            "maxTemperature": 25,
+            "minTemperature": -16,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-10",
+            "maxTemperature": -2,
+            "minTemperature": -10,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 15,
+            "minTemperature": 8,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 28,
+            "minTemperature": -12,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 1,
+            "minTemperature": -15,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 38,
+            "minTemperature": 5,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 8,
+            "minTemperature": -3,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 27,
+            "minTemperature": 26,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_7",
+                "latitude": 14.0283,
+                "longitude": 138.305
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 13,
+            "minTemperature": 5,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 27,
+            "minTemperature": 1,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-09",
+            "maxTemperature": -10,
+            "minTemperature": -14,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-10",
+            "maxTemperature": 25,
+            "minTemperature": 16,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 24,
+            "minTemperature": -12,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 36,
+            "minTemperature": 2,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 27,
+            "minTemperature": 13,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 14,
+            "minTemperature": -2,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 24,
+            "minTemperature": 15,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-16",
+            "maxTemperature": 22,
+            "minTemperature": -5,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_8",
+                "latitude": -14.4417,
+                "longitude": -177.2883
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 30,
+            "minTemperature": 0,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 16,
+            "minTemperature": 2,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-09",
+            "maxTemperature": -7,
+            "minTemperature": -18,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-10",
+            "maxTemperature": 7,
+            "minTemperature": 4,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 20,
+            "minTemperature": 9,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-12",
+            "maxTemperature": -3,
+            "minTemperature": -15,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 12,
+            "minTemperature": 5,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-14",
+            "maxTemperature": -8,
+            "minTemperature": -9,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-15",
+            "maxTemperature": 6,
+            "minTemperature": -13,
+            "condition": "RAINY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-16",
+            "maxTemperature": -8,
+            "minTemperature": -12,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_9",
+                "latitude": -52.6406,
+                "longitude": -144.2781
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 3,
+            "minTemperature": -12,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-08",
+            "maxTemperature": 9,
+            "minTemperature": -3,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-09",
+            "maxTemperature": -3,
+            "minTemperature": -5,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-10",
+            "maxTemperature": -7,
+            "minTemperature": -11,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-11",
+            "maxTemperature": 2,
+            "minTemperature": -13,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-12",
+            "maxTemperature": 34,
+            "minTemperature": 26,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-13",
+            "maxTemperature": 32,
+            "minTemperature": 24,
+            "condition": "CLOUDY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-14",
+            "maxTemperature": 22,
+            "minTemperature": 19,
+            "condition": "SUNNY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-15",
+            "maxTemperature": -2,
+            "minTemperature": -19,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-16",
+            "maxTemperature": -9,
+            "minTemperature": -16,
+            "condition": "SNOWY"
+        },
+        {
+            "location": {
+                "name": "City_10",
+                "latitude": 53.7255,
+                "longitude": 158.7767
+            },
+            "date": "2025-01-17",
+            "maxTemperature": 29,
+            "minTemperature": 8,
+            "condition": "SUNNY"
+        }
+    ]
+}

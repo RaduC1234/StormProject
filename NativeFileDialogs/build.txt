@@ -1,0 +1,1 @@
+cl /LD /Fe:native_file_dialogs.dll NativeFileDialogs.cpp /I"%JAVA_HOME%\include" /I"%JAVA_HOME%\include\win32" /link /OUT:native_file_dialogs.dll comdlg32.lib
