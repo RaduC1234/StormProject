@@ -79,8 +79,8 @@ public class MapViewController {
         promise.thenAccept(packet -> {
             Platform.runLater(() -> {
                 if (packet.isError()) {
-                    messageLabel.setText("No location found.");
-                    messageLabel.setStyle("-fx-fill: red");
+                    // If location is not found, search for the nearest location
+                    findNearestLocation();
                     return;
                 }
 
@@ -95,6 +95,38 @@ public class MapViewController {
             });
         });
     }
+
+    /**
+     * Finds the nearest location if the entered one is not found.
+     */
+    private void findNearestLocation() {
+        double defaultRadiusKm = 50.0;
+
+        JsonObject payload = new JsonObject();
+        payload.addProperty("latitude", instance.getSavedLocation().latitude());
+        payload.addProperty("longitude", instance.getSavedLocation().longitude());
+        payload.addProperty("radiusKm", defaultRadiusKm);
+
+        var promise = instance.getNetworkService().sendRequest("FIND_NEAREST_LOCATION", payload);
+
+        promise.thenAccept(response -> {
+            Platform.runLater(() -> {
+                if (response.isError()) {
+                    messageLabel.setText("No nearby locations found.");
+                    messageLabel.setStyle("-fx-fill: red");
+                    return;
+                }
+
+                Location nearestLocation = new Gson().fromJson(response.getPayload(), Location.class);
+                messageLabel.setText("Location not found. Nearest location is " + nearestLocation.name() + ".");
+                messageLabel.setStyle("-fx-fill: orange");
+            });
+        }).exceptionally(ex -> {
+            //.error("Error fetching nearest location: {}", ex.getMessage());
+            return null;
+        });
+    }
+
 
     /**
      * Sends a request to update `savedLocationString` on the server.

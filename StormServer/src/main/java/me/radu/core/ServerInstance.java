@@ -65,7 +65,8 @@ public class ServerInstance {
                 .addRequestTemplate("IS_LOCATION", new IsLocationRequest(this.databaseManager.getLocationService()))
                 .addRequestTemplate("ADMIN_ADD_INFO", new AdminAddInfoRequest(this))
                 .addRequestTemplate("GET_FORECAST", new GetForecastRequest(this))
-                .addRequestTemplate("GET_LOCATION_INFO", new GetLocationInfo(this));
+                .addRequestTemplate("GET_LOCATION_INFO", new GetLocationInfo(this))
+                .addRequestTemplate("FIND_NEAREST_LOCATION", new NearestLocationRequest(this));
 
 
         try {
