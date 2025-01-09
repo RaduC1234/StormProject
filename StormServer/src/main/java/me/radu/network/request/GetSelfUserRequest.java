@@ -8,7 +8,7 @@ import me.radu.network.Packet;
 
 public class GetSelfUserRequest implements IRequestTemplate {
 
-    private static final Gson GSON = new Gson(); // Gson instance for serialization
+    private static final Gson GSON = new Gson();
 
     @Override
     public void onIncomingRequest(Packet packet) {

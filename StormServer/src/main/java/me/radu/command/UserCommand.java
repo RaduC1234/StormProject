@@ -19,7 +19,7 @@ public class UserCommand extends ICommand {
 
         this.name = "user";
         this.description = "Command for basic user management.";
-        this.usage = "user [delete/add] <username> <firstName> <lastName> <password> <Type[NORMAL,ADMIN]> | user list ";
+        this.usage = "user [delete/add] <username> <password> <firstName> <lastName> <Type[NORMAL,ADMIN]> | user list ";
     }
 
     @Override

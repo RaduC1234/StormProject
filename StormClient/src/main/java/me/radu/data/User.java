@@ -6,7 +6,8 @@ public record User(
         String password,
         String firstName,
         String lastName,
-        UserType type
+        UserType type,
+        String savedLocationString
 ) implements Comparable<User> {
 
     @Override

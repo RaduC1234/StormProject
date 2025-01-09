@@ -73,28 +73,40 @@ public class MapViewController {
 
         JsonObject jsonPayload = new JsonObject();
         jsonPayload.addProperty("location", locationInput.getText().toLowerCase());
+
         var promise = instance.getNetworkService().sendRequest("IS_LOCATION", jsonPayload);
 
         promise.thenAccept(packet -> {
             Platform.runLater(() -> {
                 if (packet.isError()) {
-
                     messageLabel.setText("No location found.");
                     messageLabel.setStyle("-fx-fill: red");
                     return;
                 }
 
-                try {
-                    instance.setSavedLocation(new Gson().fromJson(packet.getPayload(), Location.class));
-                    messageLabel.setText("Location " + instance.getSavedLocation().name() + " saved successfully.");
-                    messageLabel.setStyle("-fx-fill: green");
-                } catch (JsonParseException exception) {
-                    messageLabel.setText("Error setting a new location.");
-                    messageLabel.setStyle("-fx-fill: red");
-                }
+                Location location = new Gson().fromJson(packet.getPayload(), Location.class);
+                instance.setSavedLocation(location);
+
+                messageLabel.setText("Location " + location.name() + " saved successfully.");
+                messageLabel.setStyle("-fx-fill: green");
+
+                // Save location persistently
+                saveLocationToServer(location.name());
             });
         });
     }
+
+    /**
+     * Sends a request to update `savedLocationString` on the server.
+     */
+    private void saveLocationToServer(String locationName) {
+        JsonObject payload = new JsonObject();
+        payload.addProperty("savedLocationString", locationName);
+
+        instance.getNetworkService().sendRequest("UPDATE_SAVED_LOCATION", payload);
+    }
+
+
 
     @FXML
     private void toggleMenu() {

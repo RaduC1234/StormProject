@@ -43,36 +43,21 @@ public class Packet {
         this.requestId = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
     }
 
-    /**
-     * Checks if this packet represents an error.
-     *
-     * @return true if the packet is an error, false otherwise.
-     */
     public boolean isError() {
         if (payload == null || !payload.isJsonObject()) return false;
         JsonObject json = payload.getAsJsonObject();
         return json.has("error");
     }
 
-    /**
-     * Gets the error code from the packet if it is an error.
-     *
-     * @return The ErrorCode if present, null otherwise.
-     */
     public ErrorCode getError() {
         if (!isError()) return null;
         JsonObject json = payload.getAsJsonObject();
         return ErrorCode.valueOf(json.get("error").getAsString());
     }
 
-    /**
-     * Sets this packet as an error with the given error code.
-     *
-     * @param errorCode The error code to set in the packet.
-     * @return The current packet instance with the error set.
-     */
+
     public Packet sendError(ErrorCode errorCode) {
-        this.requestStatus = RECEIVE; // Mark as a response
+        this.requestStatus = RECEIVE;
 
         JsonObject errorPayload = new JsonObject();
         errorPayload.addProperty("error", errorCode.name());
@@ -86,9 +71,6 @@ public class Packet {
         return GSON.toJson(this);
     }
 
-    /**
-     * Enum for defining standard error codes.
-     */
     public enum ErrorCode {
         USER_IN_USE,
         BAD_CREDENTIALS,

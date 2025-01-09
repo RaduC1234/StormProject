@@ -35,6 +35,8 @@ public class User implements Comparable<User> {
     @Enumerated(EnumType.STRING)
     private UserType type;
 
+    @Column(nullable = true)
+    private String savedLocationString;
 
     @Override
     public boolean equals(Object o) {

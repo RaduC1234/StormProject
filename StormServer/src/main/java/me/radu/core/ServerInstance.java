@@ -64,7 +64,8 @@ public class ServerInstance {
                 .addRequestTemplate("GET_SELF_USER", new GetSelfUserRequest())
                 .addRequestTemplate("IS_LOCATION", new IsLocationRequest(this.databaseManager.getLocationService()))
                 .addRequestTemplate("ADMIN_ADD_INFO", new AdminAddInfoRequest(this))
-                .addRequestTemplate("GET_FORECAST", new GetForecastRequest(this));
+                .addRequestTemplate("GET_FORECAST", new GetForecastRequest(this))
+                .addRequestTemplate("GET_LOCATION_INFO", new GetLocationInfo(this));
 
 
         try {

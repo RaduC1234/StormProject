@@ -9,9 +9,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import lombok.extern.log4j.Log4j2;
 import me.radu.core.ClientInstance;
+import me.radu.data.Location;
 import me.radu.data.User;
 import me.radu.gui.ClientGUIService;
 import me.radu.network.Packet;
+
+import java.util.Optional;
 
 @Log4j2
 public class LoginViewController {
@@ -87,12 +90,38 @@ public class LoginViewController {
             }
 
             User user = new Gson().fromJson(response.getPayload(), User.class);
-
             instance.setSelfClient(user);
+
+            // If user has a saved location name, fetch the full location object
+            Optional.ofNullable(user.savedLocationString())
+                    .filter(locationName -> !locationName.isEmpty())
+                    .ifPresent(this::requestFullLocation);
         }).exceptionally(ex -> {
             log.error("Exception while getting self user info: {}", ex.getMessage());
             return null;
         });
     }
 
+    /**
+     * Requests the full Location object from the server.
+     */
+    private void requestFullLocation(String locationName) {
+        JsonObject payload = new JsonObject();
+        payload.addProperty("location", locationName);
+
+        var locationPromise = instance.getNetworkService().sendRequest("GET_LOCATION_INFO", payload);
+
+        locationPromise.thenAccept(locationResponse -> {
+            if (locationResponse.isError()) {
+                log.error("Failed to get location details for {}", locationName);
+                return;
+            }
+
+            Location location = new Gson().fromJson(locationResponse.getPayload(), Location.class);
+            instance.setSavedLocation(location);
+        }).exceptionally(ex -> {
+            log.error("Error fetching location details: {}", ex.getMessage());
+            return null;
+        });
+    }
 }

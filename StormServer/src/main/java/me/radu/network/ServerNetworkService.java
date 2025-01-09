@@ -34,17 +34,11 @@ public class ServerNetworkService {
         this.serverInstance = serverInstance;
     }
 
-    /**
-     * Registers a new request handler template.
-     */
     public ServerNetworkService addRequestTemplate(String name, IRequestTemplate requestTemplate) {
         this.requestTemplates.put(name, requestTemplate);
         return this;
     }
 
-    /**
-     * Starts the network service on the specified port.
-     */
     public void start(int port) throws IOException {
         log.info("Starting Network Service on port {}...", port);
 

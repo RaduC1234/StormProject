@@ -2,18 +2,17 @@ package me.radu.network.request;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import me.radu.core.ServerInstance;
 import me.radu.data.Location;
 import me.radu.network.IRequestTemplate;
 import me.radu.network.Packet;
-import me.radu.data.LocationService;
 
-public class IsLocationRequest implements IRequestTemplate {
+public class GetLocationInfo implements IRequestTemplate {
 
-    private static final Gson GSON = new Gson();
-    private final LocationService locationService;
+    private ServerInstance instance;
 
-    public IsLocationRequest(LocationService locationService) {
-        this.locationService = locationService;
+    public GetLocationInfo(ServerInstance instance) {
+        this.instance = instance;
     }
 
     @Override
@@ -30,14 +29,14 @@ public class IsLocationRequest implements IRequestTemplate {
         }
 
         String locationName = payload.get("location").getAsString();
-        Location location = locationService.findByName(locationName);
+        Location location = instance.getDatabaseManager().getLocationService().findByName(locationName);
 
         if (location == null) {
             packet.sendError(Packet.ErrorCode.NOT_FOUND);
             return;
         }
 
-        // Convert location to JSON and send response
-        packet.setPayload(GSON.toJsonTree(location));
+        packet.setPayload(new Gson().toJsonTree(location));
     }
+
 }
