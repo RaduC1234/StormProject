@@ -112,14 +112,12 @@ public class AdminViewController implements SceneAware {
         }
 
         try {
-            // Read file content
             String fileContent = Files.readString(file.toPath(), StandardCharsets.UTF_8);
 
-            // Normalize and minimize JSON content
             String minimizedContent = fileContent
-                    .replaceAll("[\\r\\n]+", " ")  // Replace new lines with spaces
-                    .replaceAll("\\s{2,}", " ")   // Replace multiple spaces with a single space
-                    .trim();                      // Trim leading and trailing spaces
+                    .replaceAll("[\\r\\n]+", " ")
+                    .replaceAll("\\s{2,}", " ")
+                    .trim();
 
             JsonObject object = new JsonObject();
             object.addProperty("content", minimizedContent);
@@ -164,7 +162,7 @@ public class AdminViewController implements SceneAware {
             return;
         }
 
-        this.selectedFilePath = filePath; // ✅ Store the selected file path
+        this.selectedFilePath = filePath;
 
         this.messageLabel.setText("Selected file: " + filePath);
         this.messageLabel.setStyle("-fx-fill: white");

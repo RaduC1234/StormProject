@@ -24,7 +24,6 @@ public class AuthenticateRequest implements IRequestTemplate {
         var userService = serverInstance.getDatabaseManager().getUserService();
         var clients = serverInstance.getServerNetworkService().getClients();
 
-        // check if not in use
         for(Client client : clients) {
             if(client.getUser() != null && client.getUser().getUsername().equals(username))  {
                 packet.sendError(Packet.ErrorCode.USER_IN_USE);

@@ -69,7 +69,6 @@ public class AdminAddInfoRequest implements IRequestTemplate {
                 }
             }
 
-            // Process weather records
             for (JsonElement weatherElement : weatherArray) {
                 JsonObject weatherObj = weatherElement.getAsJsonObject();
                 JsonObject locationObj = weatherObj.getAsJsonObject("location");

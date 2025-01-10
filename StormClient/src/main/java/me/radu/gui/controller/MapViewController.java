@@ -79,7 +79,6 @@ public class MapViewController {
         promise.thenAccept(packet -> {
             Platform.runLater(() -> {
                 if (packet.isError()) {
-                    // If location is not found, search for the nearest location
                     findNearestLocation();
                     return;
                 }
@@ -90,15 +89,11 @@ public class MapViewController {
                 messageLabel.setText("Location " + location.name() + " saved successfully.");
                 messageLabel.setStyle("-fx-fill: green");
 
-                // Save location persistently
                 saveLocationToServer(location.name());
             });
         });
     }
 
-    /**
-     * Finds the nearest location if the entered one is not found.
-     */
     private void findNearestLocation() {
         double defaultRadiusKm = 50.0;
 
@@ -128,9 +123,6 @@ public class MapViewController {
     }
 
 
-    /**
-     * Sends a request to update `savedLocationString` on the server.
-     */
     private void saveLocationToServer(String locationName) {
         JsonObject payload = new JsonObject();
         payload.addProperty("savedLocationString", locationName);
@@ -156,10 +148,8 @@ public class MapViewController {
 
         widthAnimation.play();
 
-        // List of labels to animate
         List<Label> labels = List.of(forecastLabel, mapsLabel, adminLabel);
 
-        // Fade animation for text labels (smooth transition)
         FadeTransition fadeTransition = new FadeTransition(Duration.millis(300));
         fadeTransition.setFromValue(isExpanded ? 0 : 1);
         fadeTransition.setToValue(isExpanded ? 1 : 0);
@@ -167,17 +157,15 @@ public class MapViewController {
             labels.forEach(label -> {
                 label.setVisible(isExpanded);
                 label.setManaged(isExpanded);
-                label.getStyleClass().add("menu-item"); // Ensure they have the right CSS class
+                label.getStyleClass().add("menu-item");
             });
         });
 
         labels.forEach(fadeTransition::setNode);
         fadeTransition.play();
 
-        // Update toggle button icon
         toggleButton.setText(isExpanded ? "←" : "☰");
 
-        // Add or remove sidebar-expanded class dynamically
         sidebar.getStyleClass().remove("sidebar-expanded");
         if (isExpanded) {
             sidebar.getStyleClass().add("sidebar-expanded");

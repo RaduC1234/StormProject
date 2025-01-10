@@ -25,17 +25,16 @@ public class ClientInstance {
     private Location savedLocation;
 
     public void start() {
-        // Start GUI on a new thread
+
         guiThread = new Thread(() -> {
             ClientGUIService.launchGUI(this);
         });
         guiThread.setDaemon(true);
         guiThread.start();
 
-        // Start network client on this thread
         networkService = new ClientNetworkService();
         try {
-            networkService.connect("127.0.0.1", 8080); // Change host/port as needed
+            networkService.connect("127.0.0.1", 8080);
         } catch (Exception e) {
             System.err.println("Failed to connect to server: " + e.getMessage());
         }

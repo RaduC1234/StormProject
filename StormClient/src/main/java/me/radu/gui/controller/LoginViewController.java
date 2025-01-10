@@ -92,7 +92,6 @@ public class LoginViewController {
             User user = new Gson().fromJson(response.getPayload(), User.class);
             instance.setSelfClient(user);
 
-            // If user has a saved location name, fetch the full location object
             Optional.ofNullable(user.savedLocationString())
                     .filter(locationName -> !locationName.isEmpty())
                     .ifPresent(this::requestFullLocation);
@@ -102,9 +101,6 @@ public class LoginViewController {
         });
     }
 
-    /**
-     * Requests the full Location object from the server.
-     */
     private void requestFullLocation(String locationName) {
         JsonObject payload = new JsonObject();
         payload.addProperty("location", locationName);
